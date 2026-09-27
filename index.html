@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sabrina ❤️</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #160016, #52052f, #d4145a);
+  color: white;
+  overflow: hidden;
+}
+
+.page {
+  display: none;
+  min-height: 100vh;
+  padding: 30px 22px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fade 0.7s ease;
+}
+
+.page.active {
+  display: flex;
+}
+
+.content {
+  width: 100%;
+  max-width: 650px;
+  padding: 35px 25px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+
+.number {
+  color: #ff9bc5;
+  font-size: 14px;
+  letter-spacing: 4px;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 9vw, 4.5rem);
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 0 0 25px #ff4f9a;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 7vw, 3rem);
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #ffeaf3;
+}
+
+.big-heart {
+  font-size: 75px;
+  margin-bottom: 15px;
+  animation: beat 1.3s infinite;
+}
+
+button {
+  margin-top: 30px;
+  padding: 13px 25px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg,#ff4f9a,#ff91bf);
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(255,79,154,.4);
+}
+
+button:active {
+  transform: scale(.95);
+}
+
+.dots {
+  position: fixed;
+  bottom: 18px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 5;
+}
+
+.dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin: 4px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.35);
+}
+
+.dot.active {
+  background: #fff;
+  box-shadow: 0 0 10px #fff;
+}
+
+.heart {
+  position: fixed;
+  bottom: -40px;
+  pointer-events: none;
+  animation: floatUp linear forwards;
+  z-index: 0;
+}
+
+.confetti {
+  position: fixed;
+  top: -20px;
+  width: 8px;
+  height: 14px;
+  z-index: 10;
+  pointer-events: none;
+  animation: fall linear forwards;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes beat {
+  0%,100% { transform: scale(1); }
+  25% { transform: scale(1.18); }
+  50% { transform: scale(1); }
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-115vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@media(max-width:480px) {
+  .content {
+    padding: 30px 18px;
+  }
+
+  p {
+    font-size: .95rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<section class="page active">
+  <div class="content">
+    <div class="big-heart">❤️</div>
+    <div class="number">PAGE 01 / 10</div>
+    <h1>Happy Birthday<br>Sabrina</h1>
+    <p>
+      Aaj ka din mere liye bohat special hai,
+      kyun ke aaj meri favourite person duniya mein aayi thi.
+      🎂💕
+    </p>
+    <button onclick="nextPage()">Open My Heart →</button>
+  </div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page">
+  <div class="content">
+    <div class="number">PAGE 02 / 10</div>
+    <h2>Why You? 💕</h2>
+    <p>
+      Pata nahi tum mein aisi kya baat hai,
+      lekin tumse baat karna, tumhari smile dekhna,
+      aur tumhare saath waqt guzarna mere din ka
+      sabse khoobsurat hissa ban gaya hai.
+    </p>
+    <button onclick="nextPage()">Next ❤️</button>
+  </div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page">
+  <div class="content">
+    <div class="number">PAGE 03 / 10</div>
+    <h2>You Make Me Smile 😊</h2>
+    <p>
+      Tumhari ek choti si message bhi mera mood change
+      kar sakti hai. Tumhari smile mein woh magic hai
+      jo mere boring se boring din ko bhi beautiful bana deta hai.
+      ✨
+    </p>
+    <button onclick="nextPage()">Keep Going 💗</button>
+  </div>
+</section>
+
+<!-- PAGE 4 -->
+<section class="page">
+  <div class="content">
+    <div class="number">PAGE 04 / 10</div>
+    <h2>I Choose You ❤️</h2>
+    <p>
+      Agar mujhe dobara choose karna ho,
+      toh main phir tumhein choose karunga.
+      Har baar. Har situation mein.
+      Kyun ke mere liye tum sirf special nahi,
+      tum meri favourite person ho.
+    </p>
+    <button onclick="nextPage()">Next 💕</button>
+  </div>
+</section>
+
+<!-- PAGE 5 -->
+<section class="page">
+  <div class="content">
+    <div class="number">PAGE 05 / 10</div>
+    <h2>My Favourite Person 🌹</h2>
+    <p>
+      Sabrina, tumhari personality, tumhari baatein,
+      tumhara cute sa gussa aur tumhari smile—
+      mujhe tumhari har little thing pasand hai.
+      Tum jaisi ho, bilkul waisi hi beautiful ho.
+    </p>
+    <button onclick="nextPage()">One More ❤️</button>
+  </div>
+</section>
+
+<!-- PAGE 6 -->
+<section class="page">
+  <div class="content">
+    <div class="number">PAGE 06 / 10</div>
+    <h2>My Promise 🤞</h2>
+    <p>
+      Main promise karta hoon ke tumhari happiness ko
+      kabhi lightly nahi lunga.
+      Jab tum smile karo, main tumhari smile ka reason
+      banne ki koshish karunga.
+      Aur jab tum sad ho, tumhein akela feel nahi hone dunga.
+    </p>
+    <button onclick="nextPage()">Next 💖</button>
+  </div>
+</section>
+
+<!-- PAGE 7 -->
+<section class="page">
+  <div class="content">
+    <div class="number">PAGE 07 / 10</div>
+    <h2>My Favorite Memory ✨</h2>
+    <p>
+      Tumhare saath guzra hua har chota moment mere liye
+      ek beautiful memory hai.
+      Shayad tumhein woh moments normal lagte hon,
+      lekin mere liye woh moments bohat precious hain.
+    </p>
+    <button onclick="nextPage()">Next 🌙</button>
+  </div>
+</section>
+
+<!-- PAGE 8 -->
+<section class="page">
+  <div class="content">
+    <div class="number">PAGE 08 / 10</div>
+    <h2>If I Could Give You One Thing 🎁</h2>
+    <p>
+      Agar main tumhein duniya ki koi bhi cheez gift kar sakta,
+      toh main tumhein hamesha khush rehne ka reason deta.
+      Lekin filhaal...
+      mera dil tumhare naam. ❤️
+    </p>
+    <button onclick="nextPage()">Almost There 💕</button>
+  </div>
+</section>
+
+<!-- PAGE 9 -->
+<section class="page">
+  <div class="content">
+    <div class="number">PAGE 09 / 10</div>
+    <h2>One More Thing... 🥺</h2>
+    <p>
+      I don't need a perfect love story.
+      Mujhe bas aisi story chahiye jisme tum ho.
+      Tumhare saath simple moments bhi special lagte hain.
+      Aur honestly...
+      I wouldn't trade that for anything. ❤️
+    </p>
+    <button onclick="nextPage()">Final Page →</button>
+  </div>
+</section>
+
+<!-- PAGE 10 -->
+<section class="page">
+  <div class="content">
+    <div class="big-heart">💖</div>
+    <div class="number">PAGE 10 / 10</div>
+
+    <h2>Happy Birthday, Sabrina! 🎂</h2>
+
+    <p>
+      Meri taraf se tumhein duniya ki saari happiness,
+      endless smiles aur beautiful memories milen.
+      <br><br>
+      Thank you for being you.
+      Thank you for making my world a little brighter.
+      <br><br>
+      <strong>
+        I love you, Sabrina. ❤️
+      </strong>
+      <br><br>
+      May your birthday be as beautiful as your heart. 🌹
+    </p>
+
+    <button onclick="celebrate()">
+      🎉 Make It Rain Love 🎉
+    </button>
+  </div>
+</section>
+
+<div class="dots" id="dots"></div>
+
+<script>
+let currentPage = 0;
+const pages = document.querySelectorAll(".page");
+const dots = document.getElementById("dots");
+
+pages.forEach((_, i) => {
+  const dot = document.createElement("span");
+  dot.className = "dot" + (i === 0 ? " active" : "");
+  dots.appendChild(dot);
+});
+
+function showPage(index) {
+  pages.forEach(page => page.classList.remove("active"));
+
+  currentPage = (index + pages.length) % pages.length;
+
+  pages[currentPage].classList.add("active");
+
+  document.querySelectorAll(".dot").forEach((dot, i) => {
+    dot.classList.toggle("active", i === currentPage);
+  });
+}
+
+function nextPage() {
+  showPage(currentPage + 1);
+}
+
+function createHeart() {
+  const heart = document.createElement("div");
+
+  heart.className = "heart";
+  heart.textContent = ["❤️","💕","💖","💗","💘"][Math.floor(Math.random()*5)];
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = 15 + Math.random() * 25 + "px";
+  heart.style.animationDuration = 4 + Math.random() * 4 + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 9000);
+}
+
+function createConfetti() {
+  const colors = [
+    "#ff4f9a",
+    "#ffcc00",
+    "#ffffff",
+    "#7df9ff",
+    "#b86cff",
+    "#ff7eb3"
+  ];
+
+  for(let i = 0; i < 180; i++) {
+    const piece = document.createElement("div");
+
+    piece.className = "confetti";
+    piece.style.left = Math.random() * 100 + "vw";
+    piece.style.background =
+      colors[Math.floor(Math.random()*colors.length)];
+
+    piece.style.animationDuration =
+      2 + Math.random() * 4 + "s";
+
+    piece.style.animationDelay =
+      Math.random() * .8 + "s";
+
+    document.body.appendChild(piece);
+
+    setTimeout(() => piece.remove(), 6500);
+  }
+}
+
+function celebrate() {
+  createConfetti();
+
+  for(let i = 0; i < 25; i++) {
+    setTimeout(createHeart, i * 100);
+  }
+}
+
+/* Background hearts */
+setInterval(createHeart, 700);
+
+/* First celebration */
+window.addEventListener("load", () => {
+  setTimeout(celebrate, 500);
+});
+</script>
+
+</body>
+</html>
